@@ -1,5 +1,5 @@
 #Password generator
-#September 12, 2021
+#October 23, 2021
 #William Wu
 
 import random
@@ -29,4 +29,9 @@ listPassword = list(password)
 random.shuffle(listPassword)
 passwordOutput = ''.join(listPassword)
 
+passwordList = open("passwords.txt", "w")
+
 print(passwordOutput)
+print(passwordOutput, file = passwordList)
+passwordList.close()
+print("Your password has been saved to passwords.txt.")
